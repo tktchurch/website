@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import Link from 'next/link';
 
 function Ministries() {
     return (
@@ -9,7 +10,7 @@ function Ministries() {
                     <h1 className="text-white font-semibold text-7xl leading-snug">
                         Samuel Patta <br/> Ministries
                     </h1>
-                    <button className="rounded-lg bg-white text-[#6A24FE] h-14 my-8 w-64 text-2xl">
+                    <button className="rounded-lg bg-white hover:bg-slate-100 text-[#6A24FE] hover:font-semibold h-14 my-8 w-64 text-2xl">
                         Become Member
                     </button>
                 </div>
@@ -34,10 +35,10 @@ function Ministries() {
                 style={{
                     marginBottom: "56px"
                 }}>
-                    <h2 className="font-semibold text-6xl text-white">
+                    <h2 className="font-semibold text-6xl text-white w-[40rem]">
                         Explore Ministries
                     </h2>
-                    <p className="font-normal text-white text-lg my-6">
+                    <p className="font-normal text-white text-[28px] my-6 w-[38rem]">
                         We have a variety of different communities for you, have a look!
                     </p>
                 </div>
@@ -65,14 +66,15 @@ function Ministries() {
                                 Life groups are the life of our church. They are the extension of this church. <br/>  As our Senior Pastor says, “We are not a church with cells but we are a cell-based church”.
                             </p>
                        </div>
-                        <button style={{
-                            background: "linear-gradient(92.64deg, #FFBE18 -6.43%, #FF9518 108.58%)",
-                            borderRadius: "12px"
-                        }
-                        } className="rounded-lg font-medium text-black h-14 my-8 w-64 text-lg">
-                            Read More
-                        </button>
-
+                       <Link href={"/ministries/lifegroups"}>
+                            <button style={{
+                                background: "linear-gradient(92.64deg, #FFBE18 -6.43%, #FF9518 108.58%)",
+                                borderRadius: "12px"
+                            }
+                            } className="rounded-lg font-medium text-black h-14 my-8 w-64 text-lg">
+                                Read More
+                            </button>
+                        </Link>
                     </div>
                 </div>
 

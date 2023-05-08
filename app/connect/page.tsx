@@ -5,21 +5,32 @@ function ConnectPage() {
     return (
         <div className="h-full bg-[#1E1E1E]">
                 <div className="rounded-xl p-24">
-                    <div className="rounded drop-shadow-lg" style={{
+
+                    <div 
+                        style={{
+                        background: `linear-gradient(to bottom, rgba(0,0,0,0) 15%, rgba(0,0,0,1)), url("/assets/images/image2.png")`,
+                                  }}
+                        className={`text-white flex flex-col justify-start items-center gap-6 bg-center bg-cover bg-blend-darken h-[600px]`}>
+                            <svg className='w-[107px] h-[73px] mt-[250px] fill-white' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
+                                <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
+                            </svg>
+                            <p className='text-[54px] tracking-widest'>WORSHIP NIGHT</p>
+                            <p className='text-[24px]'>29th Sept, 2023</p>
+                    </div>
+                    {/* <div className="rounded drop-shadow-lg" style={{
                         borderRadius: "25px",
                         position: 'relative',
-                        width: '100%', height: '900px' }}>
+                        width: '100%', height: '600px' }}>
                         <Image
-                            className="rounded drop-shadow-lg"
+                            className="rounded-[25px] drop-shadow-lg object-fill"
                             fill
-                            sizes="100vw"
-                            style={{
-                                borderRadius: "25px",
-                                objectFit: 'fill',
-                            }}
                             src="/assets/images/image2.png"
-                            alt=""/>
-                    </div>
+                            alt="worship image"
+                        />
+                        
+                    </div> */}
+
+                    
 
                     <div className="bg-[#1E1E1E] pt-24" >
                         <h2 className="font-semibold text-6xl text-white">
@@ -76,7 +87,8 @@ function ConnectPage() {
                         Watch us live on
                     </h3>
 
-                    <div className="grid grid-flow-col gap-48 place-content-center  content-center justify-evenly justify-items-center">
+                    {/* <div className="grid grid-flow-col gap-48 place-content-center content-center justify-evenly justify-items-center"> */}
+                    <div className='flex flex-row gap-35 flex-wrap justify-between' >
                         <div>
                             <div className="rounded-lg mx-4 mt-20" style={{
                                 position: 'relative',
@@ -85,9 +97,9 @@ function ConnectPage() {
                                     fill
                                     sizes="100vw"
                                     style={{
-                                        objectFit: 'cover',
+                                        objectFit: 'contain',
                                     }}
-                                    className="rounded-lg font-normal text-white text-lg" src="/assets/images/image50.png" alt="lg"/>
+                                    className="rounded-lg font-normal px-4 text-white text-lg bg-[#f4f0f0]" src="/assets/images/image24.png" alt="lg"/>
                             </div>
                             <p className="text-center mt-2 text-xl font-normal">Thu 09:00pm</p>
                         </div>
@@ -100,11 +112,16 @@ function ConnectPage() {
                                     fill
                                     sizes="100vw"
                                     style={{
-                                        objectFit: 'cover',
+                                        objectFit: 'contain',
                                     }}
-                                    className="rounded-lg font-normal text-white text-lg" src="/assets/images/image50.png" alt="lg"/>
+                                    className="rounded-lg font-normal text-white text-lg px-4 bg-[#f4f0f0]" src="/assets/images/image26.png" alt="lg"/>
                             </div>
-                            <p className="text-center mt-2 text-xl font-normal">Bishop</p>
+                            <p className="text-center mt-2 text-xl font-normal">
+                                Daily 04:00pm
+                            </p>
+                            <p className="text-center mt-2 text-xl font-normal">
+                                Mon & Fri 06:00pm
+                            </p>
                         </div>
 
                         <div>
@@ -115,11 +132,13 @@ function ConnectPage() {
                                     fill
                                     sizes="100vw"
                                     style={{
-                                        objectFit: 'cover',
+                                        objectFit: 'contain',
                                     }}
-                                    className="rounded-lg font-normal text-white text-lg" src="/assets/images/image50.png" alt="lg"/>
+                                    className="rounded-lg font-normal text-white text-lg px-4 bg-[#f4f0f0]" src="/assets/images/image25.png" alt="lg"/>
                             </div>
-                            <p className="text-center mt-2 text-xl font-normal">Bishop</p>
+                            <p className="text-center mt-2 text-xl font-normal">
+                                Mon - Fri 06:00pm
+                            </p>
                         </div>
 
                         <div>
@@ -130,11 +149,11 @@ function ConnectPage() {
                                     fill
                                     sizes="100vw"
                                     style={{
-                                        objectFit: 'cover',
+                                        objectFit: 'contain',
                                     }}
-                                    className="rounded-lg font-normal text-white text-lg" src="/assets/images/image50.png" alt="lg"/>
+                                    className="rounded-lg font-normal text-white text-lg px-4 bg-[#f4f0f0]" src="/assets/images/image27.png" alt="lg"/>
                             </div>
-                            <p className="text-center mt-2 text-xl font-normal">Bishop</p>
+                            <p className="text-center mt-2 text-xl font-normal">Thu 09:00am</p>
                         </div>
                     </div>
                 </div>
