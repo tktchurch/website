@@ -1,11 +1,23 @@
+"use client";
 import Image from 'next/image';
-import React from 'react';
+import React, {useRef} from 'react';
 
 function App() {
+    const div1Ref = useRef(null);
+    const div2Ref = useRef(null);
+    const div3Ref = useRef(null);
+    const div4Ref = useRef(null);
+    const div5Ref = useRef(null);
+    const div6Ref = useRef(null);
+
+    const scrollToDiv = (ref : any) => {
+        ref.current.scrollIntoView({ behavior: 'smooth' });
+    };
+
     return (
         <div>
-            <div className='bg-[#000] text-white h-[640px] relative flex justify-center items-center overflow-hidden'>
-                <h1 className=' absolute top-5 text-[64px]'>Reimagining Church Experience</h1>
+            <div ref={div1Ref} onClick={() => scrollToDiv(div2Ref)} className='bg-[#000] text-white h-[100vh] relative flex justify-center items-center overflow-hidden'>
+                <h1 className=' absolute top-20 text-[64px]'>Reimagining Church Experience</h1>
                 <div className='w-[288px] h-[640px] border-[1.5px] rounded-lg border-white relative top-[50%] left-[5%] -rotate-12'>
                     <Image
                         fill
@@ -28,7 +40,7 @@ function App() {
                     />
                 </div>
             </div>
-            <div className='bg-[#FEBB24] text-white h-[600px] flex justify-between items-center px-[90px]'>
+            <div ref={div2Ref} onClick={() => scrollToDiv(div3Ref)} className='bg-[#FEBB24] text-white h-[100vh] flex justify-between items-center px-[90px]'>
                 <div>
                     <h1 className=' text-[64px] text-black w-[800px] font-semibold'>Watch us live</h1>
                     <h2 className=' text-black text-[36px] w-[800px]'>
@@ -43,7 +55,7 @@ function App() {
                     />
                 </div>
             </div>
-            <div className='bg-[#FFFFFF] text-white h-[600px] flex justify-between items-center px-[90px]'>
+            <div ref={div3Ref} onClick={() => scrollToDiv(div4Ref)} className='bg-[#FFFFFF] text-white h-[100vh] flex justify-between items-center px-[90px]'>
                 <div>
                     <h1 className=' text-[56px] text-black w-[800px] font-semibold'>Connect, learn and grow with us</h1>
                     <h2 className=' text-black text-[36px] w-[800px]'>
@@ -58,7 +70,7 @@ function App() {
                     />
                 </div>
             </div>
-            <div className='bg-[#6A24FE] text-white h-[600px] flex justify-between items-center px-[90px]'>
+            <div ref={div4Ref} onClick={() => scrollToDiv(div5Ref)} className='bg-[#6A24FE] text-white h-[100vh] flex justify-between items-center px-[90px]'>
                 <div>
                     <h1 className=' text-[64px] text-white w-[800px] font-semibold'>Request Services</h1>
                     <h2 className=' text-white text-[36px] w-[800px]'>
@@ -73,8 +85,64 @@ function App() {
                     />
                 </div>
             </div>
+            <div ref={div5Ref} onClick={() => scrollToDiv(div6Ref)} className=' h-[100vh] relative'>
+                <Image 
+                    className=' object-contain'
+                    fill
+                    src={"/assets/images/Frame279722.png"}
+                    alt='final image of app page'
+                />
+            </div>
+            <div ref={div6Ref} className=' h-[400px] bg-white text-black flex justify-between items-center px-[90px] overflow-hidden'>
+                <div className=' w-[320px] h-[710px] top-[35%] relative'>
+                    <Image
+                        className=''
+                        fill
+                        src={"/assets/images/AndroidLarge34-2.png"}
+                        alt='phone image one'
+                    />
+                </div>
+                <div>
+                    <h1 className=' text-[64px] text-black w-[800px] font-semibold'>Download the app</h1>
+                    <h2 className=' text-black text-[30px] w-[800px] font-light'>
+                        Lorem ipsum dolor sit amet consectetur. Amet vel enim enim vestibulum habitasse.
+                    </h2>
+                </div>
+            </div>
         </div>
     );
 }
 
 export default App;
+
+// import { useRef } from 'react';
+
+// const App = () => {
+//   const div1Ref = useRef(null);
+//   const div2Ref = useRef(null);
+
+//   const scrollToDiv = (ref : any) => {
+//     ref.current.scrollIntoView({ behavior: 'smooth' });
+//   };
+
+//   return (
+//     <div>
+//       <div
+//         ref={div1Ref}
+//         onClick={() => scrollToDiv(div2Ref)}
+//         style={{ height: '100vh', backgroundColor: 'red' }}
+//       >
+//         Div 1
+//       </div>
+//       <div
+//         ref={div2Ref}
+//         onClick={() => scrollToDiv(div1Ref)}
+//         style={{ height: '100vh', backgroundColor: 'blue' }}
+//       >
+//         Div 2
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default App;

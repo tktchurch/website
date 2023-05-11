@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import Pagination from './pagination';
 
 function ConnectPage() {
     return (
@@ -17,28 +18,15 @@ function ConnectPage() {
                             <p className='text-[54px] tracking-widest'>WORSHIP NIGHT</p>
                             <p className='text-[24px]'>29th Sept, 2023</p>
                     </div>
-                    {/* <div className="rounded drop-shadow-lg" style={{
-                        borderRadius: "25px",
-                        position: 'relative',
-                        width: '100%', height: '600px' }}>
-                        <Image
-                            className="rounded-[25px] drop-shadow-lg object-fill"
-                            fill
-                            src="/assets/images/image2.png"
-                            alt="worship image"
-                        />
-                        
-                    </div> */}
 
-                    
-
-                    <div className="bg-[#1E1E1E] pt-24" >
+                    <div className="bg-[#1E1E1E] pt-24 w-full" >
                         <h2 className="font-semibold text-6xl text-white">
                             Watch more Videos
                         </h2>
                         <p className="text-white leading-loose text-2xl mt-3">
                             Here are more of our videos!
                         </p>
+                        <Pagination />
                     </div>
                 </div>
 
@@ -87,7 +75,6 @@ function ConnectPage() {
                         Watch us live on
                     </h3>
 
-                    {/* <div className="grid grid-flow-col gap-48 place-content-center content-center justify-evenly justify-items-center"> */}
                     <div className='flex flex-row gap-35 flex-wrap justify-between' >
                         <div>
                             <div className="rounded-lg mx-4 mt-20" style={{

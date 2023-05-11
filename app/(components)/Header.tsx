@@ -3,7 +3,7 @@ import Link from "next/link";
 
 function Header() {
         return (
-            <header>
+            <header className=''>
                 <nav className="bg-[#000000] border-gray-200 px-4 lg:px-6 py-2.5">
                     <div className="flex flex-wrap justify-evenly items-center mx-auto max-w-screen-xl">
                         <Link href="/" className="flex items-center">
