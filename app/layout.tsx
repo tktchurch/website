@@ -10,10 +10,10 @@ export default function RootLayout({
   return (
     <html>
       <head/>
-      <body>
-      <Header/>
-      {children}
-      <Footer/>
+      <body className=' overflow-x-hidden w-[100%]'>
+        <Header/>
+        {children}
+        <Footer/>
       </body>
     </html>
   )
