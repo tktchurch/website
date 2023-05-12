@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
     return (
         <div className=''>
-            <footer className="p-4 bg-[#000000] text-white dark:bg-gray-900 lg:pt-6 pb-48 lg:pb-8">
+            <footer className="p-4 bg-[#000000] text-white dark:bg-gray-900 lg:pt-6 pb-8">
                 <div className="flex flex-col lg:flex-row lg:justify-evenly w-full">
                     <div className="mb-6 md:mb-0">
                         <a href="https://flowbite.com/" className="flex items-center">
