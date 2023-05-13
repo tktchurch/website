@@ -157,7 +157,7 @@ function Ministries() {
                                 className="font-normal text-white text-lg" src="/assets/images/ECHURCH.png" alt="lg"/>
                         </div>
                     </div>
-                    <div className="text-gray-700 px-4 py-2 m-2">
+                    <div className="text-gray-700 lg:px-4 py-2 my-2 lg:m-2">
                         <div className="flex flex-col">
                             <p className="font-semibold text-white text-[28px] lg:text-3xl">
                                E-Family
@@ -221,7 +221,7 @@ function Ministries() {
                                 className="font-normal text-white text-lg" src="/assets/images/image57.png" alt="lg"/>
                         </div>
                     </div>
-                    <div className="text-gray-700 px-4 py-2 m-2">
+                    <div className="text-gray-700 lg:px-4 py-2 my-2 lg:m-2">
                         <div className="flex flex-col">
                             <p className="font-semibold text-white text-[28px] lg:text-3xl">
                                 King's Kids
