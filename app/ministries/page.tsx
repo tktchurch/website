@@ -63,7 +63,7 @@ function Ministries() {
                             <p className="font-semibold text-white text-[28px] lg:text-3xl">
                                 Connect with a life group
                             </p>
-                            <p  className="font-normal text-[#FFFFFF99] text-2xl mt-4">
+                            <p  className="font-normal text-[#FFFFFF99] text-[16px] lg:text-2xl mt-4">
                                 Life groups are the life of our church. They are the extension of this church. <br/>  As our Senior Pastor says, “We are not a church with cells but we are a cell-based church”.
                             </p>
                        </div>
@@ -91,12 +91,12 @@ function Ministries() {
                                 className="font-normal text-white text-lg" src="/assets/images/20221129_234516_0000-11.png" alt="lg"/>
                         </div>
                     </div>
-                    <div className="text-gray-700 lg:px-4 py-2 lg:m-2">
-                        <div className="flex flex-col text-center px-4 lg:text-start lg:px-0">
+                    <div className="text-gray-700 px-4 py-2 lg:m-2">
+                        <div className="flex flex-col">
                             <p className="font-semibold text-white text-[28px] lg:text-3xl">
                                 Dominion International Bible College
                             </p>
-                            <p  className="font-normal text-[#FFFFFF99] text-2xl mt-4">
+                            <p  className="font-normal text-[#FFFFFF99] text-[16px] lg:text-2xl mt-4">
                                 Bible college is a great way to learn more about the word of God and its teachings.
 
                             </p>
@@ -113,11 +113,9 @@ function Ministries() {
                 </div>
 
 
-                <div className="rounded-lg flex flex-col lg:flex-row justify-around items-center p-16 bg-black">
+                <div className="rounded-lg flex flex-col lg:flex-row justify-around items-center lg:p-16 bg-black">
                     <div className="text-gray-700 text-center px-4 py-2 m-2">
-                        <div className="mx-4" style={{
-                            position: 'relative',
-                            width: '436px', height: '372px' }}>
+                        <div className="lg:mx-4 w-[320px] h-[280px] lg:w-[436px] lg:h-[372px] relative">
                             <Image
                                 fill
                                 sizes="100vw"
@@ -132,7 +130,7 @@ function Ministries() {
                             <p className="font-semibold text-white text-[28px] lg:text-3xl">
                                 Girl Tribe
                             </p>
-                            <p  className="font-normal text-[#FFFFFF99] text-2xl mt-4">
+                            <p  className="font-normal text-[#FFFFFF99] text-[16px] lg:text-2xl mt-4">
                                 A community of Brave, Strong, and Fierce Women that are committed <br/> to living a fearless and passionate life.
                             </p>
                         </div>
@@ -147,11 +145,9 @@ function Ministries() {
                     </div>
                 </div>
 
-                <div className="rounded-lg flex flex-col lg:flex-row-reverse justify-around items-center p-16 my-9 bg-black">
+                <div className="rounded-lg flex flex-col lg:flex-row-reverse justify-around items-center lg:p-16 my-9 bg-black">
                     <div className="text-gray-700 text-center px-4 py-2 m-2">
-                        <div className="mx-4" style={{
-                            position: 'relative',
-                            width: '436px', height: '372px' }}>
+                        <div className="lg:mx-4 w-[320px] h-[280px] lg:w-[436px] lg:h-[372px] relative">
                             <Image
                                 fill
                                 sizes="100vw"
@@ -166,7 +162,7 @@ function Ministries() {
                             <p className="font-semibold text-white text-[28px] lg:text-3xl">
                                E-Family
                             </p>
-                            <p  className="font-normal text-[#FFFFFF99] text-2xl mt-4">
+                            <p  className="font-normal text-[#FFFFFF99] text-[16px] lg:text-2xl mt-4">
                                 Learn about our Holy Bible with a <br/> community of enlightened souls.
                             </p>
                         </div>
@@ -181,11 +177,9 @@ function Ministries() {
                     </div>
                 </div>
 
-                <div className="rounded-lg flex flex-col lg:flex-row justify-around items-center p-16 bg-black">
+                <div className="rounded-lg flex flex-col lg:flex-row justify-around items-center lg:p-16 bg-black">
                     <div className="text-gray-700 text-center px-4 py-2 m-2">
-                        <div className="mx-4" style={{
-                            position: 'relative',
-                            width: '436px', height: '372px' }}>
+                        <div className="lg:mx-4 w-[320px] h-[280px] lg:w-[436px] lg:h-[372px] relative">
                             <Image
                                 fill
                                 sizes="100vw"
@@ -200,7 +194,7 @@ function Ministries() {
                             <p className="font-semibold text-white text-[28px] lg:text-3xl">
                                 Teen X Youth
                             </p>
-                            <p  className="font-normal text-[#FFFFFF99] text-2xl mt-4">
+                            <p  className="font-normal text-[#FFFFFF99] text-[16px] lg:text-2xl mt-4">
                                 Learn about our Holy Bible with a community of enlightened souls.
                             </p>
                         </div>
@@ -215,11 +209,9 @@ function Ministries() {
                     </div>
                 </div>
 
-                <div className="rounded-lg flex flex-col lg:flex-row-reverse justify-around items-center p-16 my-9 bg-black">
+                <div className="rounded-lg flex flex-col lg:flex-row-reverse justify-around items-center lg:p-16 my-9 bg-black">
                     <div className="text-gray-700 text-center px-4 py-2 m-2">
-                        <div className="mx-4" style={{
-                            position: 'relative',
-                            width: '436px', height: '372px' }}>
+                        <div className="lg:mx-4 w-[320px] h-[280px] lg:w-[436px] lg:h-[372px] relative">
                             <Image
                                 fill
                                 sizes="100vw"
@@ -234,7 +226,7 @@ function Ministries() {
                             <p className="font-semibold text-white text-[28px] lg:text-3xl">
                                 King's Kids
                             </p>
-                            <p  className="font-normal text-[#FFFFFF99] text-2xl mt-4">
+                            <p  className="font-normal text-[#FFFFFF99] text-[16px] lg:text-2xl mt-4">
                                 Learn about our Holy Bible with a <br/> community of enlightened souls.
                             </p>
                         </div>
@@ -250,11 +242,9 @@ function Ministries() {
                 </div>
 
 
-                <div className="rounded-lg flex flex-col lg:flex-row justify-around items-center p-16  bg-black">
+                <div className="rounded-lg flex flex-col lg:flex-row justify-around items-center lg:p-16  bg-black">
                     <div className="text-gray-700 text-center px-4 py-2 m-2">
-                        <div className="mx-4" style={{
-                            position: 'relative',
-                            width: '436px', height: '372px' }}>
+                        <div className="lg:mx-4 w-[320px] h-[280px] lg:w-[436px] lg:h-[372px] relative">
                             <Image
                                 fill
                                 sizes="100vw"
@@ -269,7 +259,7 @@ function Ministries() {
                             <p className="font-semibold text-white text-[28px] lg:text-3xl">
                                 Limitless Love Foundation
                             </p>
-                            <p  className="font-normal text-[#FFFFFF99] text-2xl mt-4">
+                            <p  className="font-normal text-[#FFFFFF99] text-[16px] lg:text-2xl mt-4">
                                 Learn about our Holy Bible with a  community of enlightened souls.
                             </p>
                         </div>
