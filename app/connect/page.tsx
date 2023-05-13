@@ -5,13 +5,13 @@ import Pagination from './pagination';
 function ConnectPage() {
     return (
         <div className="h-full bg-[#1E1E1E]">
-                <div className="rounded-xl p-24">
+                <div className="rounded-xl lg:p-24">
 
                     <div 
                         style={{
                         background: `linear-gradient(to bottom, rgba(0,0,0,0) 15%, rgba(0,0,0,1)), url("/assets/images/image2.png")`,
                                   }}
-                        className={`text-white flex flex-col justify-start items-center gap-6 bg-center bg-cover bg-blend-darken h-[600px]`}>
+                        className="text-white flex flex-col justify-start items-center gap-6 lg:bg-center bg-cover lg:bg-blend-darken h-[318px] lg:h-[600px]">
                             <svg className='w-[107px] h-[73px] mt-[250px] fill-white' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                                 <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/>
                             </svg>
