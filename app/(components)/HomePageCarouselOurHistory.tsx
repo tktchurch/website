@@ -57,7 +57,6 @@ function HomePageCarouselOurHistory() {
             {currentIndex === slideIndex ?
                 <RxDotFilled color='white' /> : <RxDotFilled color='grey' />
             }
-            {/* <RxDotFilled color='red' /> */}
           </div>
         ))}
       </div>

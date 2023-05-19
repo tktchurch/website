@@ -114,35 +114,3 @@ function App() {
 }
 
 export default App;
-
-// import { useRef } from 'react';
-
-// const App = () => {
-//   const div1Ref = useRef(null);
-//   const div2Ref = useRef(null);
-
-//   const scrollToDiv = (ref : any) => {
-//     ref.current.scrollIntoView({ behavior: 'smooth' });
-//   };
-
-//   return (
-//     <div>
-//       <div
-//         ref={div1Ref}
-//         onClick={() => scrollToDiv(div2Ref)}
-//         style={{ height: '100vh', backgroundColor: 'red' }}
-//       >
-//         Div 1
-//       </div>
-//       <div
-//         ref={div2Ref}
-//         onClick={() => scrollToDiv(div1Ref)}
-//         style={{ height: '100vh', backgroundColor: 'blue' }}
-//       >
-//         Div 2
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default App;
