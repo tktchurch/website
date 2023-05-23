@@ -1,8 +1,10 @@
 "use client";
 import Image from 'next/image';
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 
 function App() {
+    const [tempVar, setTempVar] = useState(0);
+
     const div1Ref = useRef(null);
     const div2Ref = useRef(null);
     const div3Ref = useRef(null);
@@ -14,25 +16,62 @@ function App() {
         ref.current.scrollIntoView({ behavior: 'smooth' });
     };
 
+    setTimeout(() => {
+        handleMouseOver()
+    }, 1000);
+
+    let handleMouseOver = () => {
+        if (tempVar === 0) {
+            setTempVar(1)
+            const centerImage = document.getElementById("centerImage");
+            const rightImage = document.getElementById("rightImage");
+            const leftImage = document.getElementById("leftImage");
+            if (centerImage !== null) {
+              centerImage.classList.add("lg:translate-y-[-15%]");
+              centerImage.classList.add("translate-y-0")
+            }
+            if (rightImage !== null) {
+                rightImage.classList.add("lg:translate-y-[-20%]");
+                rightImage.classList.add("translate-y-0")
+                rightImage.classList.add("lg:translate-x-[50%]")
+            }
+            if (leftImage !== null) {
+                leftImage.classList.add("lg:translate-y-[-20%]")
+                leftImage.classList.add("translate-y-0")
+                leftImage.classList.add("lg:translate-x-[-50%]")
+            }
+        }
+    }
+
     return (
         <div>
-            <div ref={div1Ref} onClick={() => scrollToDiv(div2Ref)} className='bg-[#000] text-white h-[60vh] lg:h-[100vh] relative flex justify-center items-center overflow-hidden'>
-                <h1 className=' absolute top-2 left-1/2 transform -translate-x-1/2 lg:left-0 lg:-translate-x-0 text-center w-[100%] lg:top-20 text-[32px] font-semibold lg:font-normal lg:text-[64px]'>Reimagining Church Experience</h1>
-                <div className='w-[288px] h-[306px] lg:h-[640px] border-[1.5px] rounded-lg border-white relative top-[28%] mt-12 lg:top-[50%] left-[10%] lg:left-[5%] -rotate-12'>
+            <div 
+                ref={div1Ref} 
+                onMouseEnter={() => {handleMouseOver()}}
+                onMouseOver={() => {handleMouseOver()}} 
+                onClick={() => scrollToDiv(div2Ref)} className='bg-[#000] text-white h-[60vh] lg:h-[100vh] relative flex justify-center items-center overflow-hidden'
+            >
+                <h1 className=' absolute top-2 left-1/2 transform -translate-x-1/2 lg:left-0 lg:-translate-x-0 text-center w-[100%] lg:top-20 text-[32px] font-semibold lg:font-normal lg:text-[64px]'>
+                    Reimagining Church Experience
+                </h1>
+                {/* left mobile image */}
+                <div id='leftImage' className='w-[288px] h-[306px] lg:h-[640px] border-[1.5px] rounded-lg border-white relative top-[28%] mt-12 lg:top-[50%] left-[10%] lg:left-[15%] -rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]'>
                     <Image
                         fill
                         src={"/assets/images/AndroidLarge21.png"}
                         alt='Phone Image One'
                     />
                 </div>
-                <div className='w-[288px]  h-[306px] lg:h-[640px] border-[1.5px] rounded-lg border-white relative top-[35%] lg:top-[50%] -right-1/4 lg:-right-[15%] rotate-12'>
+                {/* right mobile image */}
+                <div id='rightImage' className='w-[288px] h-[306px] lg:h-[640px] border-[1.5px] rounded-lg border-white relative top-[35%] lg:top-[53%] -right-1/4 lg:-right-[5%] rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]'>
                     <Image
                         fill
                         src={"/assets/images/AndroidLarge331.png"}
                         alt='Phone Image One'
                     />
                 </div>
-                <div className='w-[288px] h-[306px] lg:h-[640px] border-[1.5px] rounded-lg border-white relative top-[25%] lg:top-[30%] right-[33%] lg:right-[20%]'>
+                {/* center mobile image */}
+                <div id='centerImage' className='w-[288px] h-[306px] lg:h-[640px] border-[1.5px] rounded-lg border-white relative top-[25%] lg:top-[30%] right-[33%] lg:right-[20%] transition-transform duration-700 ease-in-out translate-y-[35%]'>
                     <Image
                         fill
                         src={"/assets/images/AndroidLarge34-2.png"}
