@@ -1,6 +1,5 @@
 "use client";
 import React from 'react';
-import NextJsCarousel from "./(components)/NextJsCarousel";
 import HomePageCarousel from './(components)/HomePageCarousel';
 import Image from "next/image";
 import HomePageCarouselOurHistory from './(components)/HomePageCarouselOurHistory';
@@ -50,9 +49,6 @@ function Home() {
     ]
     return (
             <div className="h-full bg-black">
-
-                { /* @ts-ignore */}
-                {/*<NextJsCarousel/>*/}
                 <HomePageCarousel />
                 <div className="flex flex-col lg:flex-row justify-evenly items-center px-24 py-4 lg:py-24 bg-amber-400">
                     <div className="text-gray-700 text-center px-4 lg:py-2 lg:m-2">
