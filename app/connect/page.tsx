@@ -26,6 +26,7 @@ function ConnectPage() {
                         <p className="text-white leading-loose text-[18px] lg:text-2xl mt-3 mb-3 lg:mb-0">
                             Here are more of our videos!
                         </p>
+                        <br />
                         <Pagination />
                     </div>
                 </div>

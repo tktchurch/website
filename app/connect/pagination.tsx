@@ -1,40 +1,39 @@
 "use client";
-import Image from 'next/image';
-import React, { useState, useRef } from 'react';
+import Image from "next/image";
+import React, { useState, useRef } from "react";
 
 const images = [
-  { id: 1, src: "/assets/images/image53.png" },
-  { id: 2, src: "/assets/images/image53_1.png" },
-  { id: 3, src: "/assets/images/image53_2.png" },
-  { id: 4, src: "/assets/images/image52.png" },
+  { id: 1, src: "https://www.youtube.com/embed/p9khrxrP4NE" },
+  { id: 2, src: "https://www.youtube.com/embed/skqjaADxtcU" },
+  { id: 3, src: "https://www.youtube.com/embed/mbEY8zYf4y0" },
+  { id: 4, src: "https://www.youtube.com/embed/R90HPzNCgw4" },
+  { id: 4, src: "https://www.youtube.com/embed/skqjaADxtcU" },
 ];
 
 const Pagination = () => {
+  const divRef = useRef(null);
 
-    const divRef = useRef(null);
+  const scrollAmount = 100;
 
-    const scrollAmount = 100;
-
-  const scrollClick = (element : any, a : any) => {
+  const scrollClick = (element: any, a: any) => {
     setTimeout(() => {
       element.scrollLeft += a;
     }, 0);
   };
 
   return (
-    <div className=' flex h-[220px] flex-row gap-[20px] overflow-x-auto no-scrollbar'>
-      {images && 
+    <div className=" flex h-[220px] flex-row gap-[20px] overflow-x-auto no-scrollbar">
+      {images &&
         images.map((data, index) => (
-          <Image
-            width={377}
-            height={200}
-            className=' object-cover'
+          <iframe
+            width="350"
+            height="220"
             src={data.src}
-            key={index}
-            alt='Some alternate text' 
-          />
-        ))
-      }
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          ></iframe>
+        ))}
     </div>
   );
 };

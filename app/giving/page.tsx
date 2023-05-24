@@ -131,7 +131,7 @@ function Giving() {
                     <h2 className=' text-[28px] font-semibold'>
                         WHEN YOU GIVE TO THIS MINISTRY:
                     </h2>
-                    <ul className=' text-[20px] flex flex-col gap-4 list-disc px-8'>
+                    <ul className='text-left text-[20px] flex flex-col gap-4 list-disc px-8'>
                         <li>
                             You make a difference in the lives of thousands of people all over the world.
                         </li>
