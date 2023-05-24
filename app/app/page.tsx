@@ -92,33 +92,33 @@ function App() {
         {/* left mobile image */}
         <div
           id="leftImage"
-          className="w-[288px] h-[306px] lg:h-[640px] border-[1.5px] rounded-lg border-white relative top-[0%] mt-12 lg:top-[50%] left-[10%] lg:left-[15%] -rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]"
+          className="w-[288px] h-[306px] lg:h-[640px]  rounded-lg relative top-[0%] mt-12 lg:top-[50%] left-[10%] lg:left-[12%] -rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]"
         >
           <Image
             fill
-            src={"/assets/images/AndroidLarge21.png"}
+            src={"/assets/images/app/phone1.png"}
             alt="Phone Image One"
           />
         </div>
         {/* right mobile image */}
         <div
           id="rightImage"
-          className="w-[288px] h-[306px] lg:h-[640px] border-[1.5px] rounded-lg border-white relative top-[7%] lg:top-[53%] -right-1/4 lg:-right-[5%] rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]"
+          className="w-[288px] h-[306px] lg:h-[640px]  rounded-lg  relative top-[7%] lg:top-[53%] -right-1/4 lg:-right-[5%] rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]"
         >
           <Image
             fill
-            src={"/assets/images/AndroidLarge331.png"}
+            src={"/assets/images/app/phone2.png"}
             alt="Phone Image One"
           />
         </div>
         {/* center mobile image */}
         <div
           id="centerImage"
-          className="w-[288px] h-[306px] lg:h-[640px] border-[1.5px] rounded-lg border-white relative -top-[5%] lg:top-[30%] right-[33%] lg:right-[20%] transition-transform duration-700 ease-in-out translate-y-[35%]"
+          className="w-[288px] h-[306px] lg:h-[640px]  rounded-lg  relative -top-[5%] lg:top-[30%] right-[33%] lg:right-[20%] transition-transform duration-700 ease-in-out translate-y-[35%]"
         >
           <Image
             fill
-            src={"/assets/images/AndroidLarge34-2.png"}
+            src={"/assets/images/app/phone3.png"}
             alt="Phone Image One"
           />
         </div>
@@ -140,7 +140,7 @@ function App() {
         <div className=" w-[70%] h-[75%] lg:w-[240px] lg:h-[533px] relative">
           <Image
             fill
-            src={"/assets/images/AndroidLarge34-2.png"}
+            src={"/assets/images/app/phone1.png"}
             alt="phone image one"
           />
         </div>
@@ -162,7 +162,7 @@ function App() {
         <div className=" mt-6 w-[70%] h-[75%] lg:w-[240px] lg:h-[533px] relative">
           <Image
             fill
-            src={"/assets/images/AndroidLarge21.png"}
+            src={"/assets/images/app/phone2.png"}
             alt="phone image one"
           />
         </div>
@@ -185,7 +185,7 @@ function App() {
         <div className=" w-[70%] h-[75%] lg:w-[240px] lg:h-[533px] relative">
           <Image
             fill
-            src={"/assets/images/AndroidLarge331.png"}
+            src={"/assets/images/app/phone3.png"}
             alt="phone image one"
           />
         </div>

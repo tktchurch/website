@@ -187,9 +187,21 @@ function Ministries() {
               <p className="font-semibold text-white text-[28px] lg:text-[36px]">
                 Girl Tribe
               </p>
-              <p className="font-normal text-[#FFFFFF99] text-[16px] lg:text-[32px] text-justify mt-4">
-                A community of Brave, Strong, and Fierce Women that are
-                committed <br /> to living a fearless and passionate life.
+              <p className="font-normal text-[#FFFFFF99] text-[16px] lg:text-lg text-justify mt-4">
+                <p>
+                  Girl Tribe, an initiative of The king’s Temple Church is a
+                  community of Brave, Strong, and Fierce Women that are
+                  committed to living a fearless and passionate life.
+                </p>
+
+                <p>
+                  We believe in the power of discovering destiny and creating a
+                  world and lifestyle outside the norm.No filters are needed!
+                  You can be assured that you will always have a family you can
+                  count on.
+                </p>
+
+                <p>So find your tribe TODAY!</p>
               </p>
             </div>
             <button
