@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useRef, useState, useEffect } from "react";
 
 function App() {
@@ -86,13 +87,17 @@ function App() {
         onClick={() => scrollToDiv(div2Ref)}
         className="bg-[#000] text-white h-[60vh] lg:h-[100vh] relative flex justify-center items-center overflow-hidden"
       >
-        <h1 className=" absolute top-2 left-1/2 transform -translate-x-1/2 lg:left-0 lg:-translate-x-0 text-center w-[100%] lg:top-20 text-[32px] font-semibold lg:font-normal lg:text-[64px]">
+        <h1 className=" absolute top-0 left-1/2 transform -translate-x-1/2 lg:left-0 lg:-translate-x-0 text-center w-[100%] lg:top-20 text-[32px] font-semibold lg:font-semibold lg:text-[64px]">
           Reimagining Church Experience
         </h1>
+
         {/* left mobile image */}
+
+        {/* <div className="py-12 border border-red-400 w-full"></div><br /> */}
+
         <div
           id="leftImage"
-          className="w-[288px] h-[306px] lg:h-[640px]  rounded-lg relative top-[0%] mt-12 lg:top-[50%] left-[10%] lg:left-[12%] -rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]"
+          className="w-[325px] h-[340px] lg:h-[640px]  rounded-lg relative top-[0%] mt-12 lg:top-[55%] left-[10%] lg:left-[12%] -rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]"
         >
           <Image
             fill
@@ -100,10 +105,11 @@ function App() {
             alt="Phone Image One"
           />
         </div>
+
         {/* right mobile image */}
         <div
           id="rightImage"
-          className="w-[288px] h-[306px] lg:h-[640px]  rounded-lg  relative top-[7%] lg:top-[53%] -right-1/4 lg:-right-[5%] rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]"
+          className="w-[325px] h-[340px] lg:h-[640px]  rounded-lg  relative top-[7%] lg:top-[58%] -right-1/4 lg:-right-[5%] rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]"
         >
           <Image
             fill
@@ -111,10 +117,11 @@ function App() {
             alt="Phone Image One"
           />
         </div>
+
         {/* center mobile image */}
         <div
           id="centerImage"
-          className="w-[288px] h-[306px] lg:h-[640px]  rounded-lg  relative -top-[5%] lg:top-[30%] right-[33%] lg:right-[20%] transition-transform duration-700 ease-in-out translate-y-[35%]"
+          className="w-[325px] h-[340px] lg:h-[640px]  rounded-lg  relative -top-[5%] lg:top-[35%] right-[33%] lg:right-[20%] transition-transform duration-700 ease-in-out translate-y-[35%]"
         >
           <Image
             fill
@@ -210,7 +217,7 @@ function App() {
           <Image
             className=""
             fill
-            src={"/assets/images/AndroidLarge34-2.png"}
+            src={"/assets/images/app/phone1.png"}
             alt="phone image one"
           />
         </div>
@@ -218,10 +225,31 @@ function App() {
           <h1 className=" text-[28px] lg:text-[64px] text-black lg:w-[800px] font-semibold">
             Download the app
           </h1>
-          <h2 className=" text-black text-[16px] lg:text-[30px] lg:w-[800px] font-light">
-            Lorem ipsum dolor sit amet consectetur. Amet vel enim enim
-            vestibulum habitasse.
-          </h2>
+
+          <div className="flex gap-4 mt-5">
+            <Link href="#" target="_blank">
+              <button className=" text-black px-3 py-2 flex gap-2 justify-around items-center border-black rounded-lg border-2 bg-gray-100">
+                <img
+                  width={30}
+                  src={"/assets/images/play-store-logo.png"}
+                  alt="store"
+                />
+                <span className="font-semibold">Get on Play Store</span>
+              </button>
+            </Link>
+
+            <Link href="#" target="_blank">
+              <button className=" text-black px-3 py-2 flex gap-2 justify-around items-center border-black rounded-lg border-2 bg-gray-100">
+                <img
+                  width={30}
+                  src={"/assets/images/apple-store-logo.png"}
+                  alt="store"
+                />
+                <span className="font-semibold">Get on Apple Store</span>
+              </button>
+            </Link>
+          </div>
+          <h2 className=" text-black text-[16px] lg:text-[30px] lg:w-[800px] font-light"></h2>
         </div>
       </div>
     </div>

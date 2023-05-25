@@ -56,11 +56,11 @@ export default function Slider() {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 2500,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         modules={[Autoplay, Pagination, Navigation]}
-        className="DevFestSlider"
+        className="events-slider"
       >
         {SliderData.map((slide) => {
           return (
@@ -89,7 +89,7 @@ export default function Slider() {
                       Explore Us
                     </h3>
 
-                    <div className="flex gap-24">
+                    <div className="flex gap-10 flex-col lg:gap-24 lg:flex-row">
                       {slide.events.map((event) => {
                         return (
                           <div className="flex flex-col items-center">
@@ -123,7 +123,7 @@ export default function Slider() {
 
                     <Link
                       href="/connect"
-                      className="rounded-lg mt-8 font-[500] w-[14rem] bg-white hover:bg-slate-100 text-[#0F0F0F] h-14 text-[16px] lg:text-2xl px-6 lg:pt-4 lg:pb-12"
+                      className=" text-center pt-[1rem] rounded-lg mt-8 font-[500] w-[14rem] bg-white hover:bg-slate-100 text-[#0F0F0F] h-14 text-[16px] lg:text-2xl px-6 lg:pt-4 lg:pb-12"
                     >
                       Explore More
                     </Link>

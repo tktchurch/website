@@ -43,7 +43,7 @@ function Ministries() {
             Explore Ministries
           </h2>
           <p className="font-normal text-white text-[16px] lg:text-[28px] my-6 w-[38rem]">
-            We have a variety of different communities for you, have a look!
+            We have a variety of communities for you!
           </p>
         </div>
 
@@ -93,7 +93,10 @@ function Ministries() {
                 </p>
               </p>
             </div>
-            <Link href={"/ministries/lifegroups"}>
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSceFEdbJsp8iS0hRPKPJANZIeCSE0XuFfaDVejVpjApd9T4bA/viewform"
+              target="_blank"
+            >
               <button
                 style={{
                   background:
@@ -154,16 +157,18 @@ function Ministries() {
                 </p>
               </p>
             </div>
-            <button
-              style={{
-                background:
-                  "linear-gradient(92.64deg, #FFBE18 -6.43%, #FF9518 108.58%)",
-                borderRadius: "12px",
-              }}
-              className="rounded-lg font-medium text-black h-14 my-8 w-64 text-lg lg:text-[28px]"
-            >
-              Join us
-            </button>
+            <Link href="http://wa.link/0d7n6n" target="_blank">
+              <button
+                style={{
+                  background:
+                    "linear-gradient(92.64deg, #FFBE18 -6.43%, #FF9518 108.58%)",
+                  borderRadius: "12px",
+                }}
+                className="rounded-lg font-medium text-black h-14 my-8 w-64 text-lg lg:text-[28px]"
+              >
+                Join us
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -204,16 +209,18 @@ function Ministries() {
                 <p>So find your tribe TODAY!</p>
               </p>
             </div>
-            <button
-              style={{
-                background:
-                  "linear-gradient(92.64deg, #FFBE18 -6.43%, #FF9518 108.58%)",
-                borderRadius: "12px",
-              }}
-              className="rounded-lg font-medium text-black h-14 my-8 w-64 text-lg lg:text-[28px]"
-            >
-              Join us
-            </button>
+            <Link href="http://wa.link/gs27cy" target="_blank">
+              <button
+                style={{
+                  background:
+                    "linear-gradient(92.64deg, #FFBE18 -6.43%, #FF9518 108.58%)",
+                  borderRadius: "12px",
+                }}
+                className="rounded-lg font-medium text-black h-14 my-8 w-64 text-lg lg:text-[28px]"
+              >
+                Join us
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -255,16 +262,21 @@ function Ministries() {
                 </p>
               </p>
             </div>
-            <button
-              style={{
-                background:
-                  "linear-gradient(92.64deg, #FFBE18 -6.43%, #FF9518 108.58%)",
-                borderRadius: "12px",
-              }}
-              className="rounded-lg font-medium text-black h-14 my-8 w-64 text-lg lg:text-[28px]"
+            <Link
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfZ2puzI1Ce9Ctu3p6qHFYKyhCKtRCRYQ4zz9jMUYemFpiyIQ/viewform"
+              target="_blank"
             >
-              Join us
-            </button>
+              <button
+                style={{
+                  background:
+                    "linear-gradient(92.64deg, #FFBE18 -6.43%, #FF9518 108.58%)",
+                  borderRadius: "12px",
+                }}
+                className="rounded-lg font-medium text-black h-14 my-8 w-64 text-lg lg:text-[28px]"
+              >
+                Join us
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -309,16 +321,18 @@ function Ministries() {
                 </p>
               </p>
             </div>
-            <button
-              style={{
-                background:
-                  "linear-gradient(92.64deg, #FFBE18 -6.43%, #FF9518 108.58%)",
-                borderRadius: "12px",
-              }}
-              className="rounded-lg font-medium text-black h-14 my-8 w-64 text-lg lg:text-[28px]"
-            >
-              Join us
-            </button>
+            <Link href="http://wa.link/hk38rx" target="_blank">
+              <button
+                style={{
+                  background:
+                    "linear-gradient(92.64deg, #FFBE18 -6.43%, #FF9518 108.58%)",
+                  borderRadius: "12px",
+                }}
+                className="rounded-lg font-medium text-black h-14 my-8 w-64 text-lg lg:text-[28px]"
+              >
+                Join us
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -404,16 +418,18 @@ function Ministries() {
                 </p>
               </p>
             </div>
-            <button
-              style={{
-                background:
-                  "linear-gradient(92.64deg, #FFBE18 -6.43%, #FF9518 108.58%)",
-                borderRadius: "12px",
-              }}
-              className="rounded-lg font-medium text-black h-14 my-8 w-64 text-lg lg:text-[28px]"
-            >
-              Join us
-            </button>
+            <Link href="https://wa.link/wvg0yl" target="_blank">
+              <button
+                style={{
+                  background:
+                    "linear-gradient(92.64deg, #FFBE18 -6.43%, #FF9518 108.58%)",
+                  borderRadius: "12px",
+                }}
+                className="rounded-lg font-medium text-black h-14 my-8 w-64 text-lg lg:text-[28px]"
+              >
+                Join us
+              </button>
+            </Link>
           </div>
         </div>
       </section>

@@ -6,7 +6,6 @@ import HomePageCarouselOurHistory from "./(components)/HomePageCarouselOurHistor
 import Link from "next/link";
 import Slider from "./(components)/Slider";
 
-
 function Home() {
   const meetOurFamilyImgSources = [
     //add meet our family data here
@@ -18,7 +17,7 @@ function Home() {
     {
       imgSource: "/assets/images/image51.png",
       personName: "Merlyn Patta",
-      personRole: "senior pastors",
+      personRole: "Senior Pastors",
     },
     {
       imgSource: "/assets/images/image50.png",
@@ -28,33 +27,34 @@ function Home() {
     {
       imgSource: "/assets/images/image51.png",
       personName: "Deborah patta",
-      personRole: "Creative director ",
+      personRole: "Creative Director ",
     },
     {
       imgSource: "/assets/images/image50.png",
       personName: "Samuel Vishwanath",
-      personRole: "assistant Pastor",
+      personRole: "Assistant Pastor",
     },
     {
       imgSource: "/assets/images/image51.png",
       personName: "Deepak Avinash",
-      personRole: "assistant Pastor",
+      personRole: "Assistant Pastor",
     },
     {
       imgSource: "/assets/images/image50.png",
       personName: "Praveen Gummadi",
-      personRole: "assistant Pastor",
+      personRole: "Assistant Pastor",
     },
     {
       imgSource: "/assets/images/image51.png",
       personName: "Mathew",
-      personRole: "assistant Pastor",
+      personRole: "Assistant Pastor",
     },
   ];
 
   return (
     <div className="h-full bg-black">
       <HomePageCarousel />
+
       <Slider />
 
       <div className="bg-[#6A24FE] lg:px-32 px-6 py-16">
@@ -98,7 +98,7 @@ function Home() {
             of the Lord. Thus was the Genesis of The King’s Temple.
             <br />
             <br />
-            Radical in his thinking, Rev. Samuel R. Patta desired to have The
+            Radical in his thinking, Bishop Samuel Patta desired to have The
             King’s Temple church in a Hotel Banquet Hall becoming a reason for
             ridicule and outright persecution from the traditional believers.
             But this did not stop him from pursuing his God-given dream to raise
@@ -111,7 +111,7 @@ function Home() {
             children Steven & Deborah who also serve as full-time Staff in The
             King’s Temple. The Church has been labeled “ a Word-based Church “,
             for the continued teaching, that everything happens from and
-            according to His Word, and everyone is taught in no uncertain terms,
+            according to His Word,<br /> and everyone is taught in no uncertain terms,
             not to depend on any human being, but to believe and depend only on
             our Source—God.
             <br />
@@ -124,7 +124,7 @@ function Home() {
             their home.
           </p>
         </div>
-      S</div>
+      </div>
 
       <div className="bg-white py-12 px-2 lg:p-32 max-w-[100vw]">
         <div className="flex-col flex items-center justify-center lg:justify-items-start lg:items-start">
