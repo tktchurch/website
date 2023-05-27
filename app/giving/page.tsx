@@ -41,7 +41,11 @@ function Giving() {
   return (
     <div>
       <div
-        style={{ backgroundImage: `url("/assets/images/image3.png")` }}
+        style={{
+          backgroundImage: `url("/assets/images/giving page picture.jpg")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
         className=" relative w-[100%] h-[250px] lg:h-[70vh] max-h-[650px] text-center items-center justify-center flex"
       >
         <h1 className=" text-[28px] font-semibold text-white">Give Online</h1>

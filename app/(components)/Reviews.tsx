@@ -28,8 +28,6 @@ const SliderData = [
 ];
 
 export default function Reviews() {
-  const reviews = 5;
-
   return (
     <div className="reviews-container">
       <Swiper
@@ -45,7 +43,7 @@ export default function Reviews() {
         {SliderData.map((item) => {
           return (
             <SwiperSlide key={item.id}>
-              <div className="bg-black text-white text-center lg:py-5 px-5 flex flex-col gap-3 justify-center items-center h-80 lg:h-96">
+              <div className="bg-black text-white text-center lg:py-5 px-5 flex flex-col gap-3 justify-center items-center h-96 lg:h-96">
                 <p className="max-w-[750px] lg:text-lg my-10 overflow-hidden">
                   {item.review}
                 </p>

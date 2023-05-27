@@ -230,7 +230,7 @@ function App() {
             Download the app
           </h1>
 
-          <div className="flex gap-4 mt-5">
+          <div className="flex flex-col sm:flex-row py-3 gap-4 mt-5">
             <Link
               href="https://play.google.com/store/apps/details?id=com.tktchurch.android"
               target="_blank"

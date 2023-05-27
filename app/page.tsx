@@ -5,47 +5,48 @@ import Image from "next/image";
 import HomePageCarouselOurHistory from "./(components)/HomePageCarouselOurHistory";
 import Link from "next/link";
 import Slider from "./(components)/Slider";
+import HistorySlider from "./(components)/HistorySlider";
 
 function Home() {
   const meetOurFamilyImgSources = [
     //add meet our family data here
     {
       imgSource: "/assets/images/image50.png",
-      personName: "Samuel Raj Kumar Patta",
-      personRole: "Senior Pastors",
+      personName: "Bishop Samuel Patta",
+      personRole: "Senior Pastor",
     },
     {
       imgSource: "/assets/images/image51.png",
       personName: "Merlyn Patta",
-      personRole: "Senior Pastors",
+      personRole: "Senior Pastor",
     },
     {
-      imgSource: "/assets/images/image50.png",
+      imgSource: "/assets/images/people/steven patta dp.jpg",
       personName: "Steven Patta",
       personRole: "Youth Director",
     },
     {
-      imgSource: "/assets/images/image51.png",
+      imgSource: "/assets/images/people/txynight12nov22-49.jpg",
       personName: "Deborah patta",
       personRole: "Creative Director ",
     },
     {
-      imgSource: "/assets/images/image50.png",
+      imgSource: "/assets/images/people/Samuel Vishwanath.jpg",
       personName: "Samuel Vishwanath",
       personRole: "Assistant Pastor",
     },
     {
-      imgSource: "/assets/images/image51.png",
+      imgSource: "/assets/images/people/deepak avinash png .jpg",
       personName: "Deepak Avinash",
       personRole: "Assistant Pastor",
     },
     {
-      imgSource: "/assets/images/image50.png",
+      imgSource: "/assets/images/people/praveen gummadi dp .jpg",
       personName: "Praveen Gummadi",
       personRole: "Assistant Pastor",
     },
     {
-      imgSource: "/assets/images/image51.png",
+      imgSource: "/assets/images/people/steven patta dp.jpg",
       personName: "Mathew",
       personRole: "Assistant Pastor",
     },
@@ -63,12 +64,15 @@ function Home() {
             Our History
           </h3>
           <HomePageCarouselOurHistory />
+          {/* <HistorySlider />  */}
+          {/* todo:not working */}
+
           <div className=" mt-8 w-full h-[307px] hidden lg:flex flex-row">
             <div className="w-[33%] h-full relative">
               <Image
                 fill
                 className=" object-cover"
-                src={"/assets/images/image53.png"}
+                src={"/assets/images/history/1.png"}
                 alt="Our History Image One"
               />
             </div>
@@ -76,7 +80,7 @@ function Home() {
               <Image
                 fill
                 className=" object-cover"
-                src={"/assets/images/image53_1.png"}
+                src={"/assets/images/history/6.jpg"}
                 alt="Our History Image Two"
               />
             </div>
@@ -84,7 +88,7 @@ function Home() {
               <Image
                 fill
                 className=" object-cover"
-                src={"/assets/images/image53_2.png"}
+                src={"/assets/images/history/3.jpg"}
                 alt="Our History Image Three"
               />
             </div>
@@ -111,9 +115,10 @@ function Home() {
             children Steven & Deborah who also serve as full-time Staff in The
             King’s Temple. The Church has been labeled “ a Word-based Church “,
             for the continued teaching, that everything happens from and
-            according to His Word,<br /> and everyone is taught in no uncertain terms,
-            not to depend on any human being, but to believe and depend only on
-            our Source—God.
+            according to His Word,
+            <br /> and everyone is taught in no uncertain terms, not to depend
+            on any human being, but to believe and depend only on our
+            Source—God.
             <br />
             <br />
             Today, King's Temple is the fastest growing churches in the world,
@@ -152,7 +157,7 @@ function Home() {
                       alt="lg"
                     />
                   </div>
-                  <p className="text-center lg:mt-6 text-[15px] lg:text-2xl font-semibold">
+                  <p className="text-center lg:mt-6 text-[14px] lg:text-xl font-semibold">
                     {data.personName}
                   </p>
                   <p className="text-center lg:mt-2 text-sm lg:text-xl font-normal">

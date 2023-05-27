@@ -382,10 +382,11 @@ function Ministries() {
                 fill
                 sizes="100vw"
                 style={{
-                  objectFit: "cover",
+                  objectFit: "fill",
+                  backgroundSize: "",
                 }}
                 className="font-normal text-white text-lg"
-                src="/assets/images/image56.png"
+                src="/assets/images/llf.png"
                 alt="lg"
               />
             </div>
