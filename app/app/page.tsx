@@ -2,6 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useRef, useState, useEffect } from "react";
+import Reviews from "../(components)/Reviews";
 
 function App() {
   const [tempVar, setTempVar] = useState(0);
@@ -97,7 +98,7 @@ function App() {
 
         <div
           id="leftImage"
-          className="w-[325px] h-[340px] lg:h-[640px]  rounded-lg relative top-[0%] mt-12 lg:top-[55%] left-[10%] lg:left-[12%] -rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]"
+          className="w-[325px] h-[340px] lg:h-[640px]  rounded-lg relative top-[0%] mt-12 lg:top-[55%] left-[10%] lg:left-[15%] -rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]"
         >
           <Image
             fill
@@ -109,12 +110,12 @@ function App() {
         {/* right mobile image */}
         <div
           id="rightImage"
-          className="w-[325px] h-[340px] lg:h-[640px]  rounded-lg  relative top-[7%] lg:top-[58%] -right-1/4 lg:-right-[5%] rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]"
+          className="w-[325px] h-[340px] lg:h-[640px]  rounded-lg  relative top-[7%] lg:top-[58%] -right-1/4 lg:-right-[9%] rotate-12 transition-transform duration-700 ease-in-out translate-y-[35%]"
         >
           <Image
             fill
             src={"/assets/images/app/phone2.png"}
-            alt="Phone Image One"
+            alt="Phone Image two"
           />
         </div>
 
@@ -126,7 +127,7 @@ function App() {
           <Image
             fill
             src={"/assets/images/app/phone3.png"}
-            alt="Phone Image One"
+            alt="Phone Image three"
           />
         </div>
       </div>
@@ -209,11 +210,14 @@ function App() {
           alt="final image of app page"
         />
       </div>
+
+      <Reviews />
+
       <div
         ref={div6Ref}
         className=" h-[200px] lg:h-[400px] bg-white text-black flex flex-col lg:flex-row justify-between items-center px-6 py-6 lg:py-0 lg:px-[90px] overflow-hidden"
       >
-        <div className=" w-[70%] lg:w-[320px] h-[100%] hidden lg:flex lg:h-[710px] top-[35%] relative">
+        <div className=" w-[70%] lg:w-[320px] h-[100%] hidden lg:flex lg:h-[710px] top-[45%] relative">
           <Image
             className=""
             fill
@@ -227,7 +231,10 @@ function App() {
           </h1>
 
           <div className="flex gap-4 mt-5">
-            <Link href="#" target="_blank">
+            <Link
+              href="https://play.google.com/store/apps/details?id=com.tktchurch.android"
+              target="_blank"
+            >
               <button className=" text-black px-3 py-2 flex gap-2 justify-around items-center border-black rounded-lg border-2 bg-gray-100">
                 <img
                   width={30}
@@ -238,7 +245,10 @@ function App() {
               </button>
             </Link>
 
-            <Link href="#" target="_blank">
+            <Link
+              href="https://apps.apple.com/in/app/tkt-church/id1660405270"
+              target="_blank"
+            >
               <button className=" text-black px-3 py-2 flex gap-2 justify-around items-center border-black rounded-lg border-2 bg-gray-100">
                 <img
                   width={30}
@@ -252,6 +262,7 @@ function App() {
           <h2 className=" text-black text-[16px] lg:text-[30px] lg:w-[800px] font-light"></h2>
         </div>
       </div>
+      {/* <Reviews /> */}
     </div>
   );
 }

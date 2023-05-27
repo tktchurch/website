@@ -129,7 +129,7 @@ function Home() {
       <div className="bg-white py-12 px-2 lg:p-32 max-w-[100vw]">
         <div className="flex-col flex items-center justify-center lg:justify-items-start lg:items-start">
           <h3 className=" text-2xl lg:text-6xl xl:ml-14 text-black text-start font-semibold">
-            Meet Our Family
+            Our Pastoral Team
           </h3>
 
           <div className="flex flex-row lg:flex-row flex-wrap items-center gap-y-8 gap-16 lg:gap-12 mt-12 justify-center">
