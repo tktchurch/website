@@ -46,7 +46,7 @@ function Home() {
       personRole: "Assistant Pastor",
     },
     {
-      imgSource: "/assets/images/people/steven patta dp.jpg",
+      imgSource: "/assets/images/people/Mathew.jpg",
       personName: "Mathew",
       personRole: "Assistant Pastor",
     },
