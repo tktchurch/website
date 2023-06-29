@@ -2,6 +2,9 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { makeRazorpayPayment, makeStripePayment } from "../../pages/api/hello";
+import { getCheckoutSession } from "./getCheckoutSession";
+import { Stripe } from "stripe";
+import getStripe from "./getStripe";
 
 function Giving() {
   const [currentInputFieldValue, setCurrentInputFieldValue] =
@@ -28,7 +31,7 @@ function Giving() {
 
   let handleDonationChange = (newValue: string) => {
     console.log("N", newValue);
-    
+
     setCurrentInputFieldValue(newValue);
     setInputStatus(true);
     setIsFirstInputHidden(false);
@@ -44,46 +47,39 @@ function Giving() {
     }
   }, [currentInputFieldValue]);
 
-  
-
   const initiateRazorpayPayment = async () => {
     try {
       const res = await initializeRazorpay();
       if (!res) {
-        console.log
-        ("Razorpay SDK Failed to load");
+        console.log("Razorpay SDK Failed to load");
         return;
       }
 
       const _amount = parseInt(currentInputFieldValue) * 100;
 
-      const getOrderDetails = await makeRazorpayPayment(
-        _amount,
-      );
+      const getOrderDetails = await makeRazorpayPayment(_amount);
 
-      const {razorpayKey, order_id} = getOrderDetails;
+      const { razorpayKey, order_id } = getOrderDetails;
       console.log(order_id);
-      
 
       const options = {
-        description: 'Tkt Church',
+        description: "Tkt Church",
         image:
-          'https://kingstemple.in/wp-content/uploads/2019/08/logotkt-darkk.png',
-        currency: 'INR',
+          "https://kingstemple.in/wp-content/uploads/2019/08/logotkt-darkk.png",
+        currency: "INR",
         key: razorpayKey,
         amount: _amount,
-        name: 'TKT Church',
+        name: "TKT Church",
         order_id: order_id,
-        theme: {color: '#161616'},
+        theme: { color: "#161616" },
       };
 
       const paymentObject = (window as any).Razorpay(options);
       paymentObject.open();
+    } catch (e) {
+      alert("Error in RazorPay Payment");
     }
-    catch(e) {
-      alert('Error in RazorPay Payment');
-    }
-  }
+  };
 
   const initializeRazorpay = () => {
     return new Promise((resolve) => {
@@ -104,26 +100,28 @@ function Giving() {
   const initiateStripePayment = async () => {
     try {
       const _amount = parseInt(currentInputFieldValue) * 100;
-      const {paymentIntent, ephemeralKey, customer} = await makeStripePayment(
-        _amount,
+      const { paymentIntent, ephemeralKey, customer } = await makeStripePayment(
+        _amount
       );
-      console.log(ephemeralKey);
+      // console.log(ephemeralKey);
 
-      const options = {
-        clientSecret: paymentIntent,
-        merchantDisplayName: 'Tkt Church',
-        customerId: customer,
-        customerEphemeralKeySecret: ephemeralKey,
-        paymentIntentClientSecret: paymentIntent,
-        allowsDelayedPaymentMethods: false,
-      };
+      const checkoutSession: Stripe.Checkout.Session = await getCheckoutSession(
+        _amount
+      );
+      checkoutSession.customer = customer;
+      checkoutSession.payment_intent = paymentIntent;
+      // console.log("Checkout Session ID:", checkoutSession);
 
-
+      const stripe = await getStripe();
+      const { error } = await stripe!.redirectToCheckout({
+        sessionId: checkoutSession.id,
+      });
+      console.log(error);
+    } catch (e) {
+      console.log(e);
+      alert("Error in Stripe Payment");
     }
-    catch(e) {
-      alert('Error in Stripe Payment');
-    }
-  }
+  };
 
   return (
     <div>
@@ -156,17 +154,11 @@ function Giving() {
           email address.
         </h3>
         <h2 className=" mt-16 text-[28px] font-semibold">
-
-          {
-            indiaActive ? "Domestic" : "International"
-          }
-          
-          </h2>
+          {indiaActive ? "Domestic" : "International"}
+        </h2>
         <div className=" flex flex-row border-[1px] border-gray-400 mt-4">
           <div className=" bg-gray-200 text-black font-semibold px-4 py-2 text-[20px] border-r-[1px] border-gray-400">
-            {
-              indiaActive ? "₹" : "$"
-            }
+            {indiaActive ? "₹" : "$"}
           </div>
           <input
             hidden={isFirstInputHidden}
@@ -195,37 +187,42 @@ function Giving() {
                   value={data}
                   selected={index === 0 ? true : false}
                 >
-                  {
-                    indiaActive ? (index === 5 ? data : `₹ ` + data) : index === 5 ? data : `$ ` + data
-                  }
+                  {indiaActive
+                    ? index === 5
+                      ? data
+                      : `₹ ` + data
+                    : index === 5
+                    ? data
+                    : `$ ` + data}
                 </option>
               ))}
           </select>
         </div>
-        <button className=" bg-gray-200 text-white font-semibold hover:bg-gray-300 px-4 py-2 mt-6 border-[1px] border-gray-400"
-         onClick={
-          indiaActive ? initiateRazorpayPayment : initiateStripePayment
-          }>
+        <button
+          className=" bg-gray-200 text-white font-semibold hover:bg-gray-300 px-4 py-2 mt-6 border-[1px] border-gray-400"
+          onClick={
+            indiaActive ? initiateRazorpayPayment : initiateStripePayment
+          }
+        >
           Donate Now
         </button>
 
-        <h2 className=" mt-10 text-[18px] font-semibold" onClick={() => {
-
-          if(indiaActive) {
-            setIndiaActive(false)
-            console.log(indiaActive)
-            setOutsideIndiaActive(true)
-          }
-          else if(!indiaActive) {
-            setIndiaActive(true)
-            console.log(indiaActive)
-            setOutsideIndiaActive(false)
-          }}}>
-          {
-            indiaActive ? "International" : "Domestic (India)"
-          }
-           
-           </h2>
+        <h2
+          className=" mt-10 text-[18px] font-semibold"
+          onClick={() => {
+            if (indiaActive) {
+              setIndiaActive(false);
+              console.log(indiaActive);
+              setOutsideIndiaActive(true);
+            } else if (!indiaActive) {
+              setIndiaActive(true);
+              console.log(indiaActive);
+              setOutsideIndiaActive(false);
+            }
+          }}
+        >
+          {indiaActive ? "International" : "Domestic (India)"}
+        </h2>
 
         <div className=" w-full">
           <h2 className=" text-[40px] w-full lg:px-44 text-center font-semibold mt-20">
