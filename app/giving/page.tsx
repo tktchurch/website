@@ -13,9 +13,6 @@ function Giving() {
   const [isFirstInputHidden, setIsFirstInputHidden] = useState(false);
   const [isSecondInputHidden, setIsSecondInputHidden] = useState(true);
 
-  const [indiaActive, setIndiaActive] = useState(false);
-  const [outsideIndiaActive, setOutsideIndiaActive] = useState(true);
-
   const donationArray = [
     "10.00",
     "25.00",
@@ -153,12 +150,10 @@ function Giving() {
           Give online quickly, easily and securely using your mobile number or
           email address.
         </h3>
-        <h2 className=" mt-16 text-[28px] font-semibold">
-          {indiaActive ? "Domestic" : "International"}
-        </h2>
+        <h2 className=" mt-16 text-[28px] font-semibold">International</h2>
         <div className=" flex flex-row border-[1px] border-gray-400 mt-4">
           <div className=" bg-gray-200 text-black font-semibold px-4 py-2 text-[20px] border-r-[1px] border-gray-400">
-            {indiaActive ? "₹" : "$"}
+            $
           </div>
           <input
             hidden={isFirstInputHidden}
@@ -187,42 +182,33 @@ function Giving() {
                   value={data}
                   selected={index === 0 ? true : false}
                 >
-                  {indiaActive
-                    ? index === 5
-                      ? data
-                      : `₹ ` + data
-                    : index === 5
-                    ? data
-                    : `$ ` + data}
+                  $
                 </option>
               ))}
           </select>
         </div>
         <button
           className=" bg-gray-200 text-white font-semibold hover:bg-gray-300 px-4 py-2 mt-6 border-[1px] border-gray-400"
-          onClick={
-            indiaActive ? initiateRazorpayPayment : initiateStripePayment
-          }
+          onClick={initiateStripePayment}
         >
           Donate Now
         </button>
 
-        <h2
-          className=" mt-10 text-[18px] font-semibold"
-          onClick={() => {
-            if (indiaActive) {
-              setIndiaActive(false);
-              console.log(indiaActive);
-              setOutsideIndiaActive(true);
-            } else if (!indiaActive) {
-              setIndiaActive(true);
-              console.log(indiaActive);
-              setOutsideIndiaActive(false);
-            }
-          }}
-        >
-          {indiaActive ? "International" : "Domestic (India)"}
-        </h2>
+        <h2 className=" mt-10 text-[18px] font-semibold">Domestic (India)</h2>
+
+        <button onClick={initiateRazorpayPayment} style={{ margin: "10px" }}>
+          <Image
+            // fill
+            style={{
+              border: "1px solid blue",
+              borderRadius: "5px",
+            }}
+            src="/assets/images/razorpay_btn.png"
+            alt=""
+            width={150}
+            height={100}
+          />
+        </button>
 
         <div className=" w-full">
           <h2 className=" text-[40px] w-full lg:px-44 text-center font-semibold mt-20">
