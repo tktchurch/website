@@ -4,7 +4,7 @@ module.exports = {
   experimental: {
     appDir: true,
   },
-  output: 'export',
+  //output: 'export',
   env: {
     PUBLIC_STRIPE_PUBLISHABLE_KEY:
       "pk_live_51HV9asF0AeV1mX6jPtlCWphIEG9T2ckbUEyuZZ0DjY4GZ0eXXOpScWmXqptKXcylaBRPZKELBQCJ2fDLWOZlZyrH00T1IujvgI",

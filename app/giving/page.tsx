@@ -5,6 +5,7 @@ import { makeRazorpayPayment, makeStripePayment } from "../../pages/api/hello";
 import { getCheckoutSession } from "./getCheckoutSession";
 import { Stripe } from "stripe";
 import getStripe from "./getStripe";
+import RazorpayButton from "../(components)/RazorpayButton";
 
 function Giving() {
   const [currentInputFieldValue, setCurrentInputFieldValue] =
@@ -120,6 +121,8 @@ function Giving() {
     }
   };
 
+  
+
   return (
     <div>
       <div
@@ -196,19 +199,7 @@ function Giving() {
 
         <h2 className=" mt-10 text-[18px] font-semibold">Domestic (India)</h2>
 
-        <button onClick={initiateRazorpayPayment} style={{ margin: "10px" }}>
-          <Image
-            // fill
-            style={{
-              border: "1px solid blue",
-              borderRadius: "5px",
-            }}
-            src="/assets/images/razorpay_btn.png"
-            alt=""
-            width={150}
-            height={100}
-          />
-        </button>
+        <RazorpayButton/>
 
         <div className=" w-full">
           <h2 className=" text-[40px] w-full lg:px-44 text-center font-semibold mt-20">
