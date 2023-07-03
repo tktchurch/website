@@ -12,6 +12,7 @@ function Giving() {
   const [inputStatus, setInputStatus] = useState(true); // true = input field disabled
   const [isFirstInputHidden, setIsFirstInputHidden] = useState(false);
   const [isSecondInputHidden, setIsSecondInputHidden] = useState(true);
+  const [isDonateBtnLoading, setIsDonateBtnLoading] = useState(false);
 
   const donationArray = [
     "10.00",
@@ -95,6 +96,7 @@ function Giving() {
   };
 
   const initiateStripePayment = async () => {
+    setIsDonateBtnLoading(true);
     try {
       const _amount = parseInt(currentInputFieldValue) * 100;
       const { paymentIntent, ephemeralKey, customer } = await makeStripePayment(
@@ -118,6 +120,8 @@ function Giving() {
       console.log(e);
       alert("Error in Stripe Payment");
     }
+
+    setIsDonateBtnLoading(false);
   };
 
   return (
@@ -157,14 +161,18 @@ function Giving() {
           </div>
           <input
             hidden={isFirstInputHidden}
-            className=" text-[20px] px-2"
+            className=" text-[20px] px-2 text-black font-semibold"
             disabled={inputStatus}
             value={currentInputFieldValue}
           />
           <input
             type="number"
+            onChange={(e) => {
+              e.preventDefault();
+              setCurrentInputFieldValue(String(e.target.value));
+            }}
             hidden={isSecondInputHidden}
-            className=" text-[20px] px-2"
+            className=" text-[20px] px-2 text-black font-semibold"
           />
         </div>
         <div className=" mt-4 w-[50%]">
@@ -178,25 +186,34 @@ function Giving() {
             {donationArray &&
               donationArray.map((data, index) => (
                 <option
+                  className="text-black font-semibold"
                   key={index}
                   value={data}
                   selected={index === 0 ? true : false}
                 >
-                  $
+                  $ {data}
                 </option>
               ))}
           </select>
         </div>
         <button
-          className=" bg-gray-200 text-white font-semibold hover:bg-gray-300 px-4 py-2 mt-6 border-[1px] border-gray-400"
+          className=" bg-gray-200 text-black font-bold hover:bg-gray-300 px-4 py-2 mt-6 border-[1px] border-gray-400"
           onClick={initiateStripePayment}
         >
-          Donate Now
+          {isDonateBtnLoading ? "Loading..." : "Donate Now"}
         </button>
 
-        <h2 className=" mt-10 text-[18px] font-semibold">Domestic (India)</h2>
+        <div className="py-[0px] h-[1px] w-1/2 bg-gray-300 my-4"></div>
 
-        <button onClick={initiateRazorpayPayment} style={{ margin: "10px" }}>
+        <h2 className=" mt-10 text-[24px] mb-3 font-semibold">
+          Domestic (India)
+        </h2>
+
+        <button
+          onClick={initiateRazorpayPayment}
+          style={{ margin: "10px" }}
+          className="hover:scale-105 transform transition-all duration-300 ease-in-out"
+        >
           <Image
             // fill
             style={{
