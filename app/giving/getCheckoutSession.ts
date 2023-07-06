@@ -5,7 +5,6 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 });
 
 export const getCheckoutSession = async (amount : number) => {
-
     const params: Stripe.Checkout.SessionCreateParams = {
         submit_type: 'donate',
         payment_method_types: ['card'],
@@ -28,6 +27,5 @@ export const getCheckoutSession = async (amount : number) => {
 
     const checkoutSession: Stripe.Checkout.Session =
     await stripe.checkout.sessions.create(params);
-
     return checkoutSession;
 }
