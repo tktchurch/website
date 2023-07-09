@@ -1,0 +1,15 @@
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: kingstemple-in
+  namespace: default
+spec:
+  secretName: kingstemple-in-staging-tls
+  issuerRef:
+    name: letsencrypt-staging
+    kind: ClusterIssuer
+  commonName: "*.kingstemple.in"
+  dnsNames:
+  - "kingstemple.in"
+  - "*.kingstemple.in"

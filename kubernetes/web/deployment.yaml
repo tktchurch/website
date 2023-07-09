@@ -1,0 +1,25 @@
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: tktchurch-website
+  namespace: default
+  labels:
+    app: tktchurch-website
+spec:
+  replicas: 3
+  progressDeadlineSeconds: 600
+  revisionHistoryLimit: 2
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      app: tktchurch-website
+  template:
+    metadata:
+      labels:
+        app: tktchurch-website
+    spec:
+      containers:
+      - name: tktchurch-website
+        image: tktchurch/website:latest
