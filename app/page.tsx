@@ -1,15 +1,13 @@
 "use client";
+
 import React from "react";
 import HomePageCarousel from "./(components)/HomePageCarousel";
 import Image from "next/image";
 import HomePageCarouselOurHistory from "./(components)/HomePageCarouselOurHistory";
-import Link from "next/link";
 import Slider from "./(components)/Slider";
-import HistorySlider from "./(components)/HistorySlider";
 
 function Home() {
   const meetOurFamilyImgSources = [
-    //add meet our family data here
     {
       imgSource: "/assets/images/image50.png",
       personName: "Bishop Samuel Patta",
@@ -26,12 +24,12 @@ function Home() {
       personRole: "Youth Director",
     },
     {
-      imgSource: "/assets/images/people/txynight12nov22-49.jpg",
+      imgSource: "/assets/images/people/txynight12nov22-49.webp",
       personName: "Deborah patta",
       personRole: "Creative Director ",
     },
     {
-      imgSource: "/assets/images/people/Samuel Vishwanath.jpg",
+      imgSource: "/assets/images/people/Samuel Vishwanath.webp",
       personName: "Samuel Vishwanath",
       personRole: "Assistant Pastor",
     },

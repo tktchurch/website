@@ -37,3 +37,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+/deployments/data-studio/docker-compose.yml
+/deployments/data-studio/certs/ca-certificate.crt
