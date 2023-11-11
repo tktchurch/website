@@ -11,7 +11,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/material": "^5.13.7",
     "@stripe/stripe-js": "^1.54.1",
-    "axios": "^1.4.0",
+    "axios": "^1.6.0",
     "flowbite": "^1.5.4",
     "micro": "^10.0.1",
     "micro-cors": "^0.1.1",
